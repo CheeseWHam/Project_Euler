@@ -24,32 +24,19 @@ public class one {
         factor2 = 5;
         limit = 1000;
 
-        int[] multiples = new int[limit];
-        int current = 0;
-
-        while (true) {
+        while (factor1 < limit || factor2 < limit) {
             if (factor1 < factor2) {
-                multiples[current] = factor1;
-                factor1 = factor1 + 3;
+                sum += factor1;
+                factor1 += 3;
             } else if (factor2 < factor1) {
-                multiples[current] = factor2;
-                factor2 = factor2 + 5;
+                sum += factor2;
+                factor2 += 5;
             } else {
-                multiples[current] = factor1;
-                factor1 = factor1 + 3;
-                factor2 = factor2 + 5;
+                sum += factor1;
+                factor1 += 3;
+                factor2 += 5;
             }
-            if (multiples[current] >= limit) {
-                break;
-            }
-            current = current + 1;
         }
-        
-        for (int loop = 0; loop < current; loop = loop + 1) {
-            sum = sum + multiples[loop];
-        }
-        System.out.println(sum);
-
+        System.out.println(sum);,
     }
-
 }
