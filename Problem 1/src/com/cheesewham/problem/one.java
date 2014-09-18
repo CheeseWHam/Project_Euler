@@ -17,12 +17,14 @@ public class one {
     public static void main(String[] args) {
         int factor1;
         int factor2;
+        int limit;
         int sum = 0;
 
         factor1 = 3;
         factor2 = 5;
+        limit = 1000;
 
-        while (factor1 < 1000 || factor2 < 1000) {
+        while (factor1 < limit || factor2 < limit) {
             if (factor1 < factor2) {
                 sum += factor1;
                 factor1 += 3;
@@ -35,6 +37,6 @@ public class one {
                 factor2 += 5;
             }
         }
-        System.out.println(sum);
+        System.out.println(sum);,
     }
 }
